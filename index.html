@@ -21,32 +21,98 @@
     <div class="container">
         <header>
             <h1>CONVERTER</h1>
-            <p>Kilometers &harr; Miles</p>
+            <p>Choose Your Conversion</p>
         </header>
 
-        <main class="card">
-            <div class="input-group">
-                <label for="inputValue">Enter Value</label>
-                <input type="number" id="inputValue" placeholder="0" step="any">
-            </div>
+        <nav class="tabs">
+            <button class="tab-btn active" data-converter="km-mi">KM ↔ MI</button>
+            <button class="tab-btn" data-converter="f-c">°F ↔ °C</button>
+            <button class="tab-btn" data-converter="lbs-kg">LBS ↔ KG</button>
+        </nav>
 
-            <div class="controls">
-                <div class="toggle-container">
-                    <span id="label-left" class="active">KM</span>
-                    <button id="swapBtn" aria-label="Swap units">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <span id="label-right">MI</span>
+        <main class="card">
+            <!-- KM to MI Converter -->
+            <div class="converter-content active" id="km-mi-converter">
+                <h2 class="converter-title">Kilometers ↔ Miles</h2>
+                <div class="input-group">
+                    <label for="inputValue">Enter Value</label>
+                    <input type="number" id="inputValue" placeholder="0" step="any">
+                </div>
+
+                <div class="controls">
+                    <div class="toggle-container">
+                        <span id="label-left" class="active">KM</span>
+                        <button id="swapBtn" aria-label="Swap units">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span id="label-right">MI</span>
+                    </div>
+                </div>
+
+                <div class="result-area">
+                    <span class="equals">=</span>
+                    <div id="resultValue">0</div>
+                    <div id="resultUnit">miles</div>
                 </div>
             </div>
 
-            <div class="result-area">
-                <span class="equals">=</span>
-                <div id="resultValue">0</div>
-                <div id="resultUnit">miles</div>
+            <!-- F to C Converter -->
+            <div class="converter-content" id="f-c-converter">
+                <h2 class="converter-title">Fahrenheit ↔ Celsius</h2>
+                <div class="input-group">
+                    <label for="inputValue2">Enter Value</label>
+                    <input type="number" id="inputValue2" placeholder="0" step="any">
+                </div>
+
+                <div class="controls">
+                    <div class="toggle-container">
+                        <span id="label-left-2" class="active">°F</span>
+                        <button id="swapBtn2" aria-label="Swap units">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span id="label-right-2">°C</span>
+                    </div>
+                </div>
+
+                <div class="result-area">
+                    <span class="equals">=</span>
+                    <div id="resultValue2">0</div>
+                    <div id="resultUnit2">celsius</div>
+                </div>
+            </div>
+
+            <!-- LBS to KG Converter -->
+            <div class="converter-content" id="lbs-kg-converter">
+                <h2 class="converter-title">Pounds ↔ Kilograms</h2>
+                <div class="input-group">
+                    <label for="inputValue3">Enter Value</label>
+                    <input type="number" id="inputValue3" placeholder="0" step="any">
+                </div>
+
+                <div class="controls">
+                    <div class="toggle-container">
+                        <span id="label-left-3" class="active">LBS</span>
+                        <button id="swapBtn3" aria-label="Swap units">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <span id="label-right-3">KG</span>
+                    </div>
+                </div>
+
+                <div class="result-area">
+                    <span class="equals">=</span>
+                    <div id="resultValue3">0</div>
+                    <div id="resultUnit3">kilograms</div>
+                </div>
             </div>
         </main>
 
